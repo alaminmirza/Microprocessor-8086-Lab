@@ -1,0 +1,21 @@
+1.Define a variABLE 'NAME'
+2.Assign your name to the variable
+3.MOV name [2] to the reg.AL
+4.MOV name [3] to the reg.BL
+
+
+Answer:
+
+ORG 100H
+
+MOV AL,NAME1[2]
+MOV BL,NAME1[3]
+
+
+
+RET
+
+NAME1 DB 'MIRZA ALAMIN HOSSEN',0
+
+
+END

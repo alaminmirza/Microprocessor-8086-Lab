@@ -1,0 +1,29 @@
+.MODEL SMALL   
+.STACK 100H
+.CODE 
+.DATA
+A DB 12H
+B DB 34H
+
+MAIN PROC  
+    ;MOVE DATA SEGMENT ADDRESS INTO DS
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    ;ADC 
+    ADC AL, 7AH
+    ADC AL, CL 
+    MOV SI, 14H
+    ADC AL, [SI]
+    
+    
+    
+    ;FINALLY, END YOUR PROGRAM WITH THE FOLLOWING 'FORMALITY'
+    MOV AH, 4CH
+    INT 21H
+    
+    
+MAIN ENDP
+    END MAIN
+            
+            
